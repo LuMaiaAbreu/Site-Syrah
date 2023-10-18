@@ -133,41 +133,46 @@
           
   
           <div class="container" style="max-width: 100%;">
-            <form class="row g-3">
+            <input type="hidden" name="_captcha" value="false">
+            <form action="https://formsubmit.co/lucas_maia9@hotmail.com" method="post" class="row g-3">
               <div class="col-md-4">
                 <label for="validationDefault01" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="validationDefault01" value="" required>
+                <input type="text" name="name" class="form-control" id="validationDefault01" value="" required>
               </div>
               <div class="col-md-4">
                 <label for="validationDefault02" class="form-label">Sobre Nome</label>
-                <input type="text" class="form-control" id="validationDefault02" value="" required>
+                <input type="text" name="e=mail"   class="form-control" id="validationDefault02" value="" required>
               </div>
               <div class="col-md-4">
                 <label for="validationDefaultUsername" class="form-label">Instagram</label>
                 <div class="input-group">
                   <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                  <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+                  <input type="text" name="Instagram" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
                 </div>
               </div>
               <div class="col-md-6" style="margin-top: 15px;">
                 <label for="validationDefault03" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="validationDefault03" required>
+                <input type="text" name="Cidade" class="form-control" id="validationDefault03" required>
               </div>
               <div class="col-md-3"style="margin-top: 15px">
                 <label for="validationDefault04" class="form-label">Estado</label>
-                <input type="text" class="form-control" id="validationDefault04" required>
+                <input type="text" name="Estado" class="form-control" id="validationDefault04" required>
                   
               </div>
               <div class="col-md-3" style="margin-top: 15px">
                 <label for="validationDefault05" class="form-label">Pais</label>
-                <input type="text" class="form-control" id="validationDefault05" required>
+                <input type="text" name="Pais" class="form-control" id="validationDefault05" required>
               </div>
               <div class="col-12" style="margin-top: 15px">
                 <label for="validationTextarea" class="form-label">Observações</label>
-                <textarea class="form-control" id="validationTextarea" placeholder="Mande suas duvidas " required></textarea>
+                <textarea  name="Mensagem"  class="form-control" id="validationTextarea" placeholder="Mande suas duvidas " required></textarea>
                 <div class="inva  lid-feedback">
                   
                 </div>
+              </div>
+              <div class="col-6" style="margin-top: 15px;">
+                <input type="file" name="arquivo" class="form-control" aria-label="file example" required="">
+                <div class="invalid-feedback">Example invalid form file feedback</div>
               </div>
               <div class="col-12" style="margin-top: 15px;">
                 <div class="form-check">
@@ -177,6 +182,7 @@
                   </label>
                 </div>
               </div>
+            
               
               <div class="col-10" style="margin-top: 15px;">
                 <button class="btn btn-primary" style="background-color: #1B265A;" type="submit">Enviar</button>
