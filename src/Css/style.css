@@ -24,11 +24,40 @@
 
         display: contents;
         justify-content: center;
-        max-width: 100%;
+        
     }
 
     img{
         max-width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 920px){ 
+
+    #serv1,#serv2,#serv3,#sobre1{
+
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 919px){ 
+
+    #capa1{
+
+        display: none;
+        
+    }
+
+}
+
+@media only screen and (min-width: 920px){ 
+
+    #capa2{
+
+        display: none;
+        
     }
 
 }
