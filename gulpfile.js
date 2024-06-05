@@ -1,29 +1,37 @@
-
-
-
-
+const {parallel} = require('gulp')
 const gulp = require('gulp')
-const image = require('gulp-image')
+
+const htmlmin = require('gulp-htmlmin')
+const cssmin = require('gulp-cssmin')
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 
 
 
+function tarefasCss(callback){
 
-function tarefasImagem(){
-    
-    return gulp.src('./src/Imagens/*')
-        .pipe(image({
-            pngquant: true,
-            optipng: false,
-            zopflipng: true,
-            jpegRecompress: false,
-            mozjpeg: true,
-            gifsicle: true,
-            svgo: true,
-            concurrent: 10,
-            quiet: true
-        }))
-        .pipe(gulp.dest('./dist/images'))
+
+    gulp.src([
+       
+        './src/Css/style.css',    
+    ])
+       .pipe (concat('libs.css'))
+       .pipe(cssmin())
+       .pipe(rename({suffix:'.min'}))
+       .pipe(gulp.dest('./dist'))
+
+       return callback()
 }
 
+function tarefasHTML(callback){
 
-exports.image = tarefasImagem
+    gulp.src('./src/**/*.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('./dist'))
+
+    return callback()  
+
+
+}
+
+exports.default = parallel( tarefasHTML,tarefasCss)
